@@ -1,6 +1,5 @@
 # Ignore all datasets
 data/
-datasets/
 *.csv
 *.tsv
 *.zip
