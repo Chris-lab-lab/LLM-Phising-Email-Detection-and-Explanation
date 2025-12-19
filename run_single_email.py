@@ -4,7 +4,12 @@ from agents.url_agent import extract_urls_from_text
 from agents.explanation_agent import run_explanation_agent
 from orchestrator import combine_agents
 
-df = pd.read_csv("data/normalized_emails.csv").fillna("")
+df = pd.read_csv(
+    "data/normalized_emails.csv",
+    dtype=str,
+    low_memory=False,
+    encoding_errors="ignore"
+).fillna("")
 
 row = df.sample(1).iloc[0]
 
