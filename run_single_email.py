@@ -11,7 +11,7 @@ df = pd.read_csv(
     encoding_errors="ignore"
 ).fillna("")
 
-row = df.sample(1).iloc[0]
+row = df.sample(2).iloc[0]
 
 subject = row["subject"]
 body = row["body"]
